@@ -1,0 +1,7 @@
+Name: ucenter.rpc
+# 因为前端起的是8080
+ListenOn: 127.0.0.1:8081
+Etcd:
+  Hosts:
+  - 127.0.0.1:2379
+  Key: ucenter.rpc
