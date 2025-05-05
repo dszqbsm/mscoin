@@ -39,6 +39,8 @@ services:
         condition: on-failure
     environment:
       - ALLOW_NONE_AUTHENTICATION=yes
+      - ETCD_LISTEN_CLIENT_URLS=http://0.0.0.0:2379     # 监听所有 IP
+      - ETCD_ADVERTISE_CLIENT_URLS=http://0.0.0.0:2379  # 对外宣告地址
     privileged: true
     volumes:
       - ${ETCD_DIR}/data:/bitnami/etcd/data
